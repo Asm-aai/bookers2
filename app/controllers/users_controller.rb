@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
     @books = @user.books
   end
 
@@ -22,7 +21,8 @@ class UsersController < ApplicationController
   end
 
   def index
-    # @user = User.find(params[:id])
+    @users = User.all
+    @user = current_user
     # @books = @user.books
   end
 

@@ -1,21 +1,10 @@
-<!--自分のプロフィールじゃなくて、その人のアカウント情報に変えなあかん-->
-<!--部分テンプレをif分にしたらいい-->
+<%= render 'info', user: @user %>
 
-<div>
-  <h2>User info</h2>
-  <%= image_tag @user.get_profile_image(100, 100) %>
-  <h3>name</h3>
-  <h3><%= @user.name %></h3>
-  <h3>introduction</h3>
-  <h3><%= @user.introduction %></h3>
 
-  <%= link_to "プロフィール編集のアイコン", edit_user_path %>
-</div>
-
-<%= render 'list', book: @book %>
+<%= render 'books/list', book: @book %>
 
 <h1>Books</h1>
-<%= @books.each do |book| %>
+<% @books.each do |book| %>
   <div>
     <p><%= image_tag book.user.get_profile_image(100, 100) %></p>
     <p><%= book.title %></p>
