@@ -1,3 +1,4 @@
+<%= flash[:notice] %>
 <%= render 'users/info', user: @user %>
 <%= render 'list', book: @book2 %>
 
@@ -16,11 +17,11 @@
   <%= @book.user.name %>  link付
    <!--link_to @book.user.name, user_id_path -->
 
-  <p><%= @book.title %></p>
-  <p><%= @book.body %></p>
+  <p>Title：<%= @book.title %></p>
+  <p>Opinion：<%= @book.body %></p>
 
-  <p>Edit</p>
   <% if @book.user == current_user %>
+    <%= link_to "Edit", edit_book_path %>
     <%= link_to "Destroy", books_path(@book), method: :delete %>
   <% end %>
 </div>
