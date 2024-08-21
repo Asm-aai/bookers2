@@ -1,5 +1,5 @@
 <%= render 'users/info', user: @user %>
-<%= render 'list', book: @book %>
+<%= render 'list', book: @book2 %>
 
 <% if @book.errors.any? %>
   <%= @book.errors.count %> errors prohibited this obj from being saved:
@@ -13,9 +13,6 @@
 <div>
   <h1>Book detail</h1>
   <%= image_tag @book.user.get_profile_image(100, 100) %>
-  プロフィール画像
-  <p><%= image_tag 'default-image.jpg' %></p>
-
   <%= @book.user.name %>  link付
    <!--link_to @book.user.name, user_id_path -->
 
