@@ -1,8 +1,21 @@
-<h1>welcome to <i class="fa-solid fa-book"></i>Bookers !!</h1>
-<h3>In <i class="fa-solid fa-book"></i>Bookers,</h3>
-<p>you can share and exchange your opinions , inpressions , and emotions
+<div class="container">
+  <div class="row">
+    <!--<div class="col-md-3"></div>-->
+    <div class="col-md-8 offset-3 py-3">
+      <h1>welcome to <b><i class="fa-solid fa-book"></i>Bookers !!</b></h1>
+      <h6>In <b><i class="fa-solid fa-book"></i>Bookers,</b></h6>
+      <br>
+      <p>you can share and exchange your opinions , inpressions , and emotions</p>
+      <p>about various books!</p>
 
-about various books!</p>
+      <div class="row">
+        <div class="col-md-6 offset-1">
+          <%= link_to " Log in ", new_user_session_path, class: "btn btn-info w-100 my-1" %>
+          <%= link_to " Sign up ", new_user_registration_path, class: "btn btn-success w-100 my-1" %>
+        </div>
+      </div>
 
-<li><%= link_to " Sign up ", new_user_registration_path %></li>
-<li><%= link_to " Log in ", new_user_session_path %></li>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
