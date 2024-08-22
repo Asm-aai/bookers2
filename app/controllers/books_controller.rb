@@ -22,7 +22,7 @@ class BooksController < ApplicationController
       @user = current_user
       @books = Book.all
       flash[:notice] = "error"
-      render :show
+      render :index
     end
   end
 
