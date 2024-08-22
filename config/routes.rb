@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :books, only: [:show, :index, :create, :destroy, :edit]
   root to: "homes#top"
 
-  get "/homes/about" => "homes#about", as: 'about'
+  get "/home/about" => "homes#about", as: 'about'
   post 'books' => 'books#create'
   patch "/books/:id" => "books#update", as: 'update_book'
   delete "/books/:id" => "books#destroy"
